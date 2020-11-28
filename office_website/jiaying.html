@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-CuOF+2SnTUfTwSZjCXf01h7uYhfOBuxIhGKPbfEJ3+FqH/s6cIFN9bGr1HmAg4fQ" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Goldman&family=Monoton&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        #menu_control {
+            position: absolute;
+            z-index: -2;
+            opacity: 0;
+        }
+        
+        .section {
+            height: 100vh;
+            background-image: url("bg1280.png");
+            background-repeat: no-repeat;
+        }
+        
+        .header {
+            width: 100%;
+            /* background-color: #F00; */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 5px 10px;
+            top: 0;
+        }
+        
+        .menu_btn {
+            width: 50px;
+            height: 40px;
+            border-radius: 25% 10%;
+            border: 1px solid #ffff;
+            /* background-color: rgb(4, 45, 72); */
+            display: block;
+            position: absolute;
+            top: 12px;
+            right: 15px;
+            /* 若寬高設定沒有效果，去看是inline還是block */
+            /* 右邊漢堡 */
+        }
+        
+        .menu_btn span {
+            opacity: 0;
+            /* color:#aaa; */
+            width: 1px;
+            height: 1px;
+            display: block;
+            overflow: hidden;
+            /* 超出範圍直接被隱藏 */
+        }
+        
+        .menu_btn::before {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 36px;
+            left: 7px;
+            background-color: #fff;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            box-shadow: 0px 8px 0px #fff, 0px -8px 0px #fff;
+        }
+        
+        h1 {
+            color: #fff;
+            position: absolute;
+            font-family: 'Goldman', cursive;
+            text-decoration: none;
+            top: 15px;
+            right: 80px;
+            font-size: 30px;
+        }
+        
+        h3 {
+            color: #fff;
+            position: absolute;
+            font-family: 'Goldman', cursive;
+            text-decoration: none;
+            top: 55px;
+            right: 80px;
+            font-size: 20px;
+        }
+        
+        nav {
+            width: 20%;
+            height: calc(45vh - 50px);
+            background-color: rgb(4, 45, 72);
+            position: absolute;
+            right: 0;
+            top: -100%;
+            transition: .6s;
+            opacity: .7;
+            border-radius: 5% 0;
+        }
+        
+        nav a {
+            display: block;
+            font-family: 'Goldman', cursive;
+            text-decoration: none;
+            color: #fff;
+            padding: 15px 20px 0;
+            border-bottom: solid 1px #fff;
+        }
+        
+        #menu_control:checked~.header nav {
+            top: 90px;
+        }
+        
+        .profile {
+            padding: 20px;
+            height: 300px;
+            /* background-color: red; */
+        }
+        
+        .profile .avator {
+            width: 200px;
+            height: 200px;
+            margin: auto;
+        }
+        
+        .profile .avator img {
+            border-radius: 50%;
+            width: 100%;
+            margin-bottom: 20px;
+            border: 1px solid #D0D0D0;
+        }
+        
+        .profile .txt {
+            align-items: center;
+        }
+        
+        .profile .txt h4 {
+            font-size: 20px;
+            text-align: center;
+            font-family: 'Goldman', cursive;
+            text-decoration: none;
+        }
+        
+        .article .col-6 {
+            padding: 20px;
+            width: 70%;
+            background-color: rgb(4, 45, 72);
+            opacity: .7;
+            color: #fff;
+            border-radius: 0 0 5% 5%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <input type="checkbox" name="" id="menu_control">
+    <div class="section"></div>
+    <div class="header">
+        <h1>Jocelyn's 人生開發日誌</h1>
+        <h3>為自己學Coding</h3>
+        <label for="menu_control" class="menu_btn">
+            <span>選單</span>
+            </label>
+        <nav>
+            <a href="aa">Profile</a>
+            <a href="aa">Archive</a>
+            <a href="aa">Gallery</a>
+            <a href="aa">Contact</a>
+        </nav>
+    </div>
+    <div class="profile">
+        <div class="container">
+            <div class="row">
+                <div class="avator">
+                    <img src="Lee Jocelyn_人物(1000x1000px).png">
+                </div>
+                <div class="txt">
+                    <h4>綠色是本命的數位宅女</h4>
+                    <h4 style="color:#CE0000;">Ruby on Rails 工程師</h4>
+                    <!-- <span>HTML/CSS</span><span>JS</span> -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="article">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 ml-auto mr-auto">
+                    研究內部次數組成在此商務不肯擁有，通用頻道免費版英語個人，還可以無關花園廣播首頁，授權方式而來擁有魔獸英文冠軍開發者大會輸出註冊轉貼越來越幽默，財富圖像化加入時間仍然作戰更好真實核心才是理念論文存款台南，長度模糊長時間夫妻警察溫暖趕緊寶寶，左右魔法確實網。研究內部次數組成在此商務不肯擁有，通用頻道免費版英語個人，還可以無關花園廣播首頁，授權方式而來擁有魔獸英文冠軍開發者大會輸出註冊轉貼越來越幽默，財富圖像化加入時間仍然作戰更好真實核心才是理念論文存款台南，長度模糊長時間夫妻警察溫暖趕緊寶寶，左右魔法確實網。研究內部次數組成在此商務不肯擁有，通用頻道免費版英語個人，還可以無關花園廣播首頁，授權方式而來擁有魔獸英文冠軍開發者大會輸出註冊轉貼越來越幽默，財富圖像化加入時間仍然作戰更好真實核心才是理念論文存款台南，長度模糊長時間夫妻警察溫暖趕緊寶寶，左右魔法確實網。研究內部次數組成在此商務不肯擁有，通用頻道免費版英語個人，還可以無關花園廣播首頁，授權方式而來擁有魔獸英文冠軍開發者大會輸出註冊轉貼越來越幽默，財富圖像化加入時間仍然作戰更好真實核心才是理念論文存款台南，長度模糊長時間夫妻警察溫暖趕緊寶寶，左右魔法確實網。研究內部次數組成在此商務不肯擁有，通用頻道免費版英語個人，還可以無關花園廣播首頁，授權方式而來擁有魔獸英文冠軍開發者大會輸出註冊轉貼越來越幽默，財富圖像化加入時間仍然作戰更好真實核心才是理念論文存款台南，長度模糊長時間夫妻警察溫暖趕緊寶寶，左右魔法確實網。研究內部次數組成在此商務不肯擁有，通用頻道免費版英語個人，還可以無關花園廣播首頁，授權方式而來擁有魔獸英文冠軍開發者大會輸出註冊轉貼越來越幽默，財富圖像化加入時間仍然作戰更好真實核心才是理念論文存款台南，長度模糊長時間夫妻警察溫暖趕緊寶寶，左右魔法確實網。
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-popRpmFF9JQgExhfw5tZT4I9/CI5e2QcuUZPOVXb1m7qUmeR2b50u+YFEYe1wgzy" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
